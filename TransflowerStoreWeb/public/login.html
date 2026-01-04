@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transflower Web</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="login.html/">Sign In</a>
+    <hr/>
+    <form method="post" action="/login"> <!-- Sends form data securely via POST to the /login route -->
+
+        <table>
+        <tr>
+            <td><label>Email</label></td>
+            <td><input type="text" name="email" required /></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" name="password" required /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Login</button></td>
+        </tr>
+    </table>
+</form>
+<a href="register.html">Register new user</a>
+</body>
+</html>
