@@ -7,5 +7,38 @@
     <h1>Flower Details</h1>
     <a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="login.html/">Sign In</a>
     <hr/>
+    <input id="username" type="text" value="Samruddhi Rasal">
+    </br>
+    <input id="Location" type="text" value="Pune">
+    </br>
+    <button onClick="onButtonClick()">Show Data</button>
+    <p id="paraUserName">UserName</p>
+    <p id="paraLocation">location</p>
+    <script>
+        var onButtonClick=function(){
+
+            //getting reference of element whose id is username
+            var txtUsername=document.getElementById("username");
+            var dataUsername=txtUsername.value;
+
+            var txtLocation=document.getElementById("Location");
+            var dataLocation=txtLocation.value;
+
+            //get the reference of element whose id is para1
+            var elementUserName=document.getElementById("paraUserName");
+            elementUserName.innerHTML=dataUsername;
+
+            var elementLocation=document.getElementById("paraLocation");
+            elementLocation.innerHTML=dataLocation;
+
+            //DOM API
+
+            //document.createElement()-----will create new html element
+            //document.removeChild()-----will remove existing html element
+            //document.replaceChild()-----will append existing html element with new html element
+            //document.write
+
+        };
+        </script>
 </body>
 </html>

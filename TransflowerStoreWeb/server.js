@@ -3,7 +3,7 @@
 var express = require('express');
 var path = require('path');
 //var bodyParser = require('body-parser');
-const app = express();
+const app = express(); // once value assigned does not changes
 const { urlencoded } = require("express");
 
 // Configure public folder as static folder to express module
