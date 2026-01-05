@@ -7,5 +7,18 @@
     <h1>Contact Us</h1>
     <a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/contact.html">Contact</a> | <a href="login.html/">Sign In</a>
     <hr/>
+
+    <p id="paral">This is simple sentence....</p>
+    <button onclick="onButtonClick()">Change content</button>
+    <script>
+        var onButtonClick=function(){
+
+            alert("button is clicked....");
+            //DOM
+            var element=document.getElementById("paral");
+            element.innerHTML="Transflower Learning Pvt.Ltd....";
+            
+        };
+    </script>
 </body>
 </html>

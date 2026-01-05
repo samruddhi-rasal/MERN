@@ -1,3 +1,5 @@
+//Server side JavaScript code
+
 var express = require('express');
 var path = require('path');
 //var bodyParser = require('body-parser');
@@ -10,6 +12,10 @@ app.use(express.json()); //app.use is used to configure middlewares in express
 var staticMiddleware = express.static(path.join(__dirname, "public"));
 app.use(staticMiddleware);
 
+//3 middleware are configured here
+//      -encoding
+//      -extracting json data 
+//      -static resource holder path 
 
 //3 http request handlers
 app.get("/", (req, res) => {
