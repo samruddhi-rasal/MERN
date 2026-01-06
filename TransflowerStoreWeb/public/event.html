@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transflower Store</title>
+</head>
+<body>
+
+    <!-- <button onClick="alert('button is pressed')">click me</button> -->
+
+    <button id="myBtn">Press me</button>
+    <p id="demo">Hello</p>
+
+    <script>
+        //What is the root node DOM Tree?
+        //Ans is Document
+        var btn = document.getElementById("myBtn");
+        btn.addEventListener("click", displayDate);
+        document.addEventListener("mousedown",onMouseDown);    //attach a listener to the document
+        document.addEventListener("mouseup",onMouseUp);
+        document.addEventListener("mousemove",onMouseMove);
+
+        // Client Side Event Register
+        // event handler registration for click event
+        //Event handler
+        //Event reciever
+        //Event listener
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        };
+
+        function onMouseDown(event){
+            var x = event.clientX;
+            var y = event.clientY;
+            var coords = x + "," + y;
+             document.getElementById("demo").innerHTML = coords;
+
+        };
+        function onMouseUp(event){
+            var x = event.clientX;
+            var y = event.clientY;
+            var coords =  x + "," + y;
+             document.getElementById("demo").innerHTML =coords;
+
+        };
+        function onMouseMove(event){
+            var x = event.clientX;
+            var y = event.clientY;
+            var coords = x + "," + y;
+             document.getElementById("demo").innerHTML = coords;
+        };
+        function onKeyDown(event){
+            var key = event.key;
+            document.getElementById("demo").innerHTML = key;
+        };
+
+
+
+    </script>
+
+</body>
+</html>

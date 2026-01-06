@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paint Brush</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="800" height="400" style="background-color:bisque"></canvas>
+        <h1 style="color:rgb(95, 169, 169) ;">Transflower Paint Brush</h1>
+        <p style="color:darkgreen; font-size: x-large; font-style: italic;">Doing ordinary things extra ordinarily</p>
+    <script>
+        function drawline(){
+            //DOM
+            var theCanvas=document.getElementById("myCanvas");
+            var context=theCanvas.getContext("2d");
+            context.moveTo(10,10); //x and y coordinates from where u have to draw the line
+            context.lineTo(200,900); //x and y coordinates where u have to stop the line
+            context.stroke();
+        };
+        function drawRectangle(){
+            var theCanvas=document.getElementById("myCanvas");
+            var context=theCanvas.getContext("2d");
+            context.fillStyle="blue";
+            context.fillRect(300,50,200,100); //x and y coordinates from where u have to start the rectangle,width,height
+        };
+        function drawTriangle(){
+            var theCanvas=document.getElementById("myCanvas");
+            var context=theCanvas.getContext("2d");
+            context.beginPath();
+            context.moveTo(500,200); //x and y coordinates from where u have to start the triangle
+            context.lineTo(600,50); //x and y coordinates of second point of triangle
+            context.lineTo(700,200); //x and y coordinates of third point of triangle
+            context.closePath();
+            context.fillStyle="red";
+            context.fill();
+        };
+        function drawCircle(){
+            var theCanvas=document.getElementById("myCanvas");
+            var context=theCanvas.getContext("2d");
+            context.beginPath();
+            context.arc(150,150,75,45,2*Math.PI); //x and y coordinates of center,radius,start angle,end angle
+            context.stroke();
+            context.fill();
+        }
+        function drawSmily() {
+            var canvas = document.getElementById('myCanvas');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                ctx.beginPath();
+                ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                ctx.moveTo(110, 75);
+                ctx.arc(75, 75, 35, 0, Math.PI, false);   // Mouth (clockwise)
+                ctx.moveTo(60, 65);
+                ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+                ctx.moveTo(90, 65);
+                ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+                ctx.stroke();
+            }       
+        }
+        drawSmily();
+        drawCircle();
+        drawTriangle();
+        drawline();
+        drawRectangle();
+    </script>    
+    </body>
+
+</html>

@@ -27,12 +27,12 @@ var monitor=function(){
 
         //handlers.blockAccount();
         //console.log("Insufficient funds! Balance is below minimum required.");
-        emitter.emit("underBalance");// Emit underBalance event
+        emitter.emit("underBalance",balance);// Emit underBalance event
     }
-    else if(balance > 250000){
+    else if(balance > 200000){
         //handlers.payIncomeTAx();
         //console.log("Crossing the income tax limit! Taxation will be applied.");
-        emitter.emit("overBalance");// Emit overBalance event
+        emitter.emit("overBalance",balance);// Emit overBalance event
     }
 
 
@@ -67,8 +67,8 @@ emitter.on("overBalance",handlers.payIncomeTAx);
 var acct123 = new Account(55000);
 var data=acct123.recieveBalance();
 console.log("Balance=" + data);
-var amount=200000;
-acct123.debit(52000);
-//acct123.credit(amount);
+var amount=300000;
+//acct123.debit(52000);
+acct123.credit(amount);
 data=acct123.recieveBalance();
 console.log("Balance " + data);

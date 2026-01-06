@@ -4,11 +4,14 @@
 //expose functions to be used outside of javascript file 
 //we are publishhing functions outside using exports keywords
 
-exports.payIncomeTAx=function(){
-    console.log("20% income tax to be applied against the account!");
+exports.payIncomeTAx=function(currentBalance){
+    console.log("Current Balance=" + currentBalance);
+    let tax=currentBalance * 0.20;
+    console.log(tax + " income tax to be applied against the account!");
 }
 
-exports.payServiceTax=function(){
+exports.payServiceTax=function(currentBalance){
+    console.log("Current Balance=" + currentBalance);
     console.log("15% service tax to be applied against the account!");
 }
 exports.blockaccount=function(){
