@@ -8,19 +8,19 @@
     <input type="text" id="txtName"/>
     <button onclick="onSetData()">Set Data</button>
     <hr/>
-    <div id="result"></div>
+    <div id="result"></div> <!-- -div allows to organise the content in very good way--->
     <script>
         function onSetData(){
             //logic for setting data into storage
-            if(typeof(Storage)!=="undefined"){
+            if(typeof(Storage)!=="undefined"){ //if storage is supported by the browser it will go further else it will come out 
                 var txtInput=document.getElementById("txtName");
-                var name=txtInput.value;
+                var name=txtInput.value;  //to retrieve the value from input box
                 localStorage.setItem("Person",name); //setting data into local storage
 
             }
             else{
                 var divId=document.getElementById("result");
-                divId.innerHTML="Sorry! Your browser does not support Web Storage...";
+                divId.innerHTML="Sorry! Your browser does not support HTML 5 featureWeb Storage...";
             }
                 
         }
