@@ -13,8 +13,8 @@ var person = {
 };
 var data="Hello World";
 //custom (programmer defined) function
-var onRequestHandler=function(request,response){
-    console.log("Request received from browser");
+var onRequestHandler=function(request,response){  //callback function
+    console.log("Request received from browser");  
     response.writeHead(200,{'Content-Type':'text/html'});
     response.write("<h1>Welcome to HTTP Server Programming</h1>");
     //Serialization : Converting JSON object to string
