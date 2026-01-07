@@ -1,1 +1,1 @@
-Just started to learn NodeJS 
+Just started to learn NodeJS --> Event Driven Programming --> Node JS Architecture --> File I/O --> Building web applications using HTTP --> Node Modules and NPM(Node Package Manager) --> Express Js -->REST APIs --> JavaScript --> HTML Programming --> DHTML(Dynamic HTML) --> HTML5 Features --> GUI Programming --> Web Storage 
