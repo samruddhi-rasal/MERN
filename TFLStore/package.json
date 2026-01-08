@@ -1,0 +1,17 @@
+{
+  "name": "tflstore",
+  "version": "1.0.0",
+  "description": "Simple online Web Application using Node JS and Express Js and MySQL for database",
+  "license": "ISC",
+  "author": "Samruddhi Rasal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2",
+    "mysql": "^2.18.1"
+  }
+}
