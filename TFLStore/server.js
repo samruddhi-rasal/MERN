@@ -17,7 +17,8 @@ var customers = [{"id":1,"first name":"Samruddhi", "Last name": "Rasal", "email"
                  {"id":2,"first name":"Tanishka", "Last name": "Doe", "email":"john.doe@gmail.com","contact number":9876543211},
                  {"id":3,"first name":"Sai", "Last name": "Smith", "email":"jane.smith@gmail.com","contact number":9876543212},
                  {"id":4,"first name":"Jui", "Last name": "Johnson", "email":"alice.johnson@gmail.com","contact number":9876543213},
-                 {"id":5,"first name":"Vishwajeet", "Last name": "Brown", "email":"bob.brown@gmail.com","contact number":9876543214}];      
+                 {"id":5,"first name":"Vishwajeet", "Last name": "Brown", "email":"bob.brown@gmail.com","contact number":9876543214},
+                 ];      
 
 //MiddleWare Configuration
 app.use(express.static(path.join(__dirname, 'public')));
@@ -100,6 +101,19 @@ app.post("/api/flowers",(req, res)=>{
     let newFlower=req.body;
     flowers.push(newFlower);
     res.send("Flower Added Successfully!");
+});
+app.post("/api/flowers",(req, res)=>{
+    let newFlower=req.body;
+    flowers.push(newFlower);
+    res.send("Flower Added Successfully!");
+});
+
+app.delete("/api/flowers/:id",(req,res)=>{
+
+    let id = req.params.id;
+    let remainingFlowers=flowers.filter(f=>f.id!=id);
+    flowers=remainingFlowers;
+    res.send("Flower Deleted Successfully!");
 });
 app.listen(9000)
     console.log("Server is running on port 9000");
