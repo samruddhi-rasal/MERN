@@ -1,0 +1,7 @@
+[
+    {"id":1,"first name":"Samruddhi", "Last name": "Rasal", "email":"samruddhi@gmail.com","contact number":9876543210},
+    {"id":2,"first name":"Tanishka", "Last name": "Doe", "email":"john.doe@gmail.com","contact number":9876543211},
+    {"id":3,"first name":"Sai", "Last name": "Smith", "email":"jane.smith@gmail.com","contact number":9876543212},
+    {"id":4,"first name":"Jui", "Last name": "Johnson", "email":"alice.johnson@gmail.com","contact number":9876543213},
+    {"id":5,"first name":"Vishwajeet", "Last name": "Brown", "email":"bob.brown@gmail.com","contact number":9876543214}
+]

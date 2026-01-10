@@ -1,24 +1,11 @@
 var express = require('express');
 var path = require('path');
 var app = express();
-var credentials=[{"id":1,"username":"Samruddhi", "password":"Rasal123",
-                  "id":2,"username":"Sai", "password":"Rasal1",
-                  "id":3,"username":"Tanishka", "password":"Rasal12",
-                  "id":4,"username":"Jui", "password":"Rasal",
-                  "id":5,"username":"Vishwajeet", "password":"Rasal0123",}];
+var credentials = require('./data/credentials.json');
 
-var flowers =[{"id":1,"name":"Rose", "description":"wedding flowers", "price":10, "imageurl":"/images/rose.jpg", "quantity":5, "likes": 45000}, 
-              {"id":2,"name":"Lily", "description":"birthday flowers", "price":15, "imageurl":"/images/lily.jpg", "quantity":3, "likes": 30000},
-              {"id":3,"name":"Tulip", "description":"anniversary flowers", "price":12, "imageurl":"/images/tulip.jpg", "quantity":7, "likes": 25000},
-              {"id":4,"name":"Daisy", "description":"get well soon flowers", "price":8, "imageurl":"/images/daisy.jpg", "quantity":10, "likes": 15000},
-              {"id":5,"name":"Orchid", "description":"special occasion flowers", "price":20, "imageurl":"/images/orchid.jpg", "quantity":4, "likes": 40000}];
+var flowers = require('./data/flowers.json');
 
-var customers = [{"id":1,"first name":"Samruddhi", "Last name": "Rasal", "email":"samruddhi@gmail.com","contact number":9876543210},
-                 {"id":2,"first name":"Tanishka", "Last name": "Doe", "email":"john.doe@gmail.com","contact number":9876543211},
-                 {"id":3,"first name":"Sai", "Last name": "Smith", "email":"jane.smith@gmail.com","contact number":9876543212},
-                 {"id":4,"first name":"Jui", "Last name": "Johnson", "email":"alice.johnson@gmail.com","contact number":9876543213},
-                 {"id":5,"first name":"Vishwajeet", "Last name": "Brown", "email":"bob.brown@gmail.com","contact number":9876543214},
-                 ];      
+var customers = require('./data/customer.json');    
 
 //MiddleWare Configuration
 app.use(express.static(path.join(__dirname, 'public')));
@@ -70,6 +57,7 @@ app.get("/api/customers/:id",(req,res)=>{
 });
 //HTTP Post Handlers
 app.post("/api/login",(req, res)=>{
+    console.log("Login post is invoked....");
     var user=req.body;
     if(user.username=="Samruddhi" && user.password=="Rasal123"){
         res.send("Valid User!");
@@ -91,6 +79,7 @@ app.post("/api/login",(req, res)=>{
 });
 
 app.post("/api/register",(req, res)=>{
+    console.log("Register post is invoked....");
     var newCustomer=req.body;
     customers.push(newCustomer);
     res.send("Customer Registered Successfully!");
@@ -111,7 +100,7 @@ app.post("/api/flowers",(req, res)=>{
 app.delete("/api/flowers/:id",(req,res)=>{
 
     let id = req.params.id;
-    let remainingFlowers=flowers.filter(f=>f.id!=id);
+    let remainingFlowers=flowers.filter(f=>f.id!=id);// THE FILTER FUNCTION WILL RETURN ALL FLOWERS EXCEPT THE ONE WITH THE GIVEN ID
     flowers=remainingFlowers;
     res.send("Flower Deleted Successfully!");
 });
