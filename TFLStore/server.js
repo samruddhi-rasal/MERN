@@ -14,6 +14,8 @@ app.use(express.json());
 
 //Node JS Application consist of 5 HTTP handlers
 
+//Server side HTTP CRUD Operations Implementation
+//CRUD Operations are perform on customer JSON Array 
 //Node JS Application consists of 4 REST API Handlers
 app.get("/", function(req, res) {
     res.sendfile("index.html");
@@ -27,6 +29,18 @@ app.get("/", function(req, res) {
 //callback function map to each HTTPWebRequest is called as HTTPHandler
 //web query : http:localhost:9000/api/flowers
 //sql query : select * from flowers
+//serverr side UPDATE  operatiom for incoming HTTP PUT request
+app.put("/api/customers/:id",(req, res)=>{
+    //
+    var existingCustomerId=req.params.id;
+    var customerToBeUpdated = req.body;
+    //find that object in customers collection
+    //update data to array customers
+    console.log("data to be updated at customers @server");
+    console.log(customerToBeUpdated)
+    response.send("Customer data updated");
+});
+//serverr side GET operatiom for incoming HTTP GET request
 app.get("/api/flowers",(req,res)=>{
     res.send(flowers);
 
@@ -65,6 +79,7 @@ app.post("/api/login",(req, res)=>{
     else{
         res.send("Invalid User!");
     }
+    
     /*let theUser=credentials.find(credential=>credential.username==user.username && credential.password==user.password)
     let message="Invalid User!";
     if(theUser !== undefined){
@@ -72,12 +87,14 @@ app.post("/api/login",(req, res)=>{
     }
     respond.send(message);  
     */
+
+
     /*
     Check credetials again MySQL Database and send proper response
     back to calling lient Application
     */
 });
-
+//serverr side POSToperatiom for incoming HTTP POST request
 app.post("/api/register",(req, res)=>{
     console.log("Register post is invoked....");
     var newCustomer=req.body;
@@ -97,6 +114,7 @@ app.post("/api/flowers",(req, res)=>{
     res.send("Flower Added Successfully!");
 });
 
+//serverr side delete operatiom for incoming HTTP Delete request
 app.delete("/api/flowers/:id",(req,res)=>{
 
     let id = req.params.id;
