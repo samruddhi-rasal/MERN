@@ -1,10 +1,18 @@
 var express = require('express');
 var path = require('path');
 var app = express();
+var fs=require('fs');
+
+var sql=require('./mysql2connect');
+var dbserver ={
+    host:'localhost',
+    user:'root',
+    password:'password',
+    database: 'customers'
+};
+
 var credentials = require('./data/credentials.json');
-
 var flowers = require('./data/flowers.json');
-
 var customers = require('./data/customer.json');    
 
 //MiddleWare Configuration
@@ -57,6 +65,22 @@ app.get("/api/flowers/:id",(req,res)=>{
     res.send(flower);
 });
 
+//******************************************************* */
+//HTTP CRUD Operations for Flowers
+app.get("/api/users",(req,res)=>{
+    var selectAllQuery="select * from users";
+    sql.query(selectAllQuery,function(err,data){
+    if(err){
+        console.log("error : " +err);
+    }
+    else{
+        res.send(data);
+    }
+});
+
+});
+
+
 app.get("/api/customers",(req,res)=>{
     //web query processing logic
     res.send(customers);
@@ -79,7 +103,7 @@ app.post("/api/login",(req, res)=>{
     else{
         res.send("Invalid User!");
     }
-    
+
     /*let theUser=credentials.find(credential=>credential.username==user.username && credential.password==user.password)
     let message="Invalid User!";
     if(theUser !== undefined){

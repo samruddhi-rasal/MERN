@@ -6,6 +6,11 @@
         <body>
             <h1>Update Existing Customer</h1>
             <hr/>
+                <button id="btnCreate">Create</button></br>
+                <button id="btnRead">Read</button></br>
+                <button id="btnUpdate">Update</button></br>
+                <button id="btnDelete">Delete</button></br>
+                <button id="btnReadTasks">Read Tasks</button></br>
             <table>
     <tr>
         <td><label>Id</label></td>
@@ -40,7 +45,7 @@
 
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
+            $("#btnCreate").click(function(){
                 //alert("button clicked.....")
                 //send data to rest api for post request handler
                 //http:localhost:9000/api/customer/7
@@ -51,6 +56,8 @@
                     "email" : "konde@gmail.com",
                     "contact number" : 98776543335
                 };
+            })
+
             let url="/api/customers/"+theCustomer.id;
             //invoiking PUT REST API At server side
             /*$.put(url,theCustomer,function(){
@@ -66,6 +73,17 @@
            //CRUD Operation of jQuery to invoke CRUD Operations Available at server side
            //$.ajax() method
             //U operation : update operation
+            $("#btnUpdate").click(function(){
+                //alert("button clicked.....")
+                //send data to rest api for post request handler
+                //http:localhost:9000/api/customer/7
+                var theCustomer={
+                    "id":7,
+                    "firstname": "Sanskruti",
+                    "lastname" : "Rasal",
+                    "email" : "rasal@gmail.com",
+                    "contactnumber" : 98446543335
+                };
             $.ajax({
                 url: 'test.html', //url of rest api
                 type:'PUT', //request type of rest api
@@ -100,21 +118,36 @@
             
             //used to fetch all customer from server
             //R : read operation
+            $("#btnRead").click(function(){
             $.ajax({
                 url: url, //url of rest api
                 type:'GET', //request type of rest api
                 success: function (result){
                     //Do something with the result
 
-                    console.log(resulkt);
+                    console.log(result);
+                }
+            });
+            });
+
+            $("#btnReadTasks").click(function(){
+            $.ajax({
+                url: "/api/tasks", //url of rest api
+                type:'GET', //request type of rest api
+                success: function (result){
+                    //Do something with the result
+                    console.log(result);
+                    console.log("All tasks recieved from server, ultimately from database server");
+                },
+                error:function(err){
+                    console.log(err);
+
                 }
             });
             });
         });
-
+        });
+    
     </script>
-
-
-        </body>
-    </head>
+</body>
 </html>

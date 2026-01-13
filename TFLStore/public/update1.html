@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operations using Ajax jQuery</title>
+    <script src="scripts/jquery.min.js"></script>
+</head>
+
+<body>
+
+<h1>Update Existing Customer</h1>
+<hr/>
+
+<button id="btnCreate">Create</button><br/>
+<button id="btnRead">Read</button><br/>
+<button id="btnUpdate">Update</button><br/>
+<button id="btnDelete">Delete</button><br/>
+
+<table>
+    <tr>
+        <td><label>Id</label></td>
+        <td><input type="text" id="id" value="7"/></td>
+    </tr>
+
+    <tr>
+        <td><label>Name</label></td>
+        <td><input type="text" id="name"/></td>
+    </tr>
+
+    <tr>
+        <td><label>Contact</label></td>
+        <td><input type="text" id="contact"/></td>
+    </tr>
+</table>
+
+<script>
+$(document).ready(function () {
+
+    // shared user object
+    var user = {
+        id: 7,
+        name: "",
+        contact: ""
+    };
+
+    var baseUrl = "/api/users";
+
+    // CREATE USER
+    $("#btnCreate").click(function () {
+
+        user.name = $("#name").val();
+        user.contact = $("#contact").val();
+
+        $.ajax({
+            url: baseUrl,
+            type: "POST",
+            data: user,
+            success: function () {
+                console.log("User created successfully");
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+
+    // READ USER BY ID
+    $("#btnRead").click(function () {
+
+        var id = $("#id").val();
+
+        $.ajax({
+            url: baseUrl + "/" + id,
+            type: "GET",
+            success: function (result) {
+                console.log(result);
+
+                // populate form
+                $("#name").val(result.name);
+                $("#contact").val(result.contact);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+
+    // UPDATE USER
+    $("#btnUpdate").click(function () {
+
+        var id = $("#id").val();
+
+        user.name = $("#name").val();
+        user.contact = $("#contact").val();
+
+        $.ajax({
+            url: baseUrl + "/" + id,
+            type: "PUT",
+            data: user,
+            success: function () {
+                console.log("User updated successfully");
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+
+    // DELETE USER
+    $("#btnDelete").click(function () {
+
+        var id = $("#id").val();
+
+        $.ajax({
+            url: baseUrl + "/" + id,
+            type: "DELETE",
+            success: function () {
+                console.log("User deleted successfully");
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>
