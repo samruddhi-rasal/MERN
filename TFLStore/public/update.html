@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src = "scripts/jquery.min.js"></script>
-        </head>
         <body>
-            <h1>Update Existing Customer</h1>
+            <h1>Update Existing Flower</h1>
+            <script>src="/scripts/jquery.min.js"</script>
             <hr/>
-                <button id="btnCreate">Create</button></br>
-                <button id="btnRead">Read</button></br>
-                <button id="btnUpdate">Update</button></br>
-                <button id="btnDelete">Delete</button></br>
-                <button id="btnReadTasks">Read Tasks</button></br>
             <table>
-    <tr>
-        <td><label>Id</label></td>
-        <td><input type="text" name="id" id="id"/></td>
-    </tr>
-
-    <tr>
-        <td><label>FirstName</label></td>
-        <td><input type="text" name="FirstName" id="FirstName"/></td>
-    </tr>
-
-    <tr>
-        <td><label>LastName</label></td>
-        <td><input type="text" name="LastName" id="LastName"/></td>
-    </tr>
-
-    <tr>
-        <td><label>Email</label></td>
-        <td><input type="text" name="Email" id="Email"/></td>
-    </tr>
-
-    <tr>
-        <td><label>ContactNumber</label></td>
-        <td><input type="text" name="contactnumber" id="contactnumber"/></td>
-    </tr>
-
+                <tr>
+                <td><lable>ID</lable></td>
+                <td><input type="text" id="id" name="id" required /></td>
+            </tr>
+            <tr>
+                <td><lable>First Name</lable></td>
+                <td><input type="text" id="firstname" name="firstname" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Last Name</lable></td>
+                <td><input type="text" id="lastname" name="lastname" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Email ID</lable></td>
+                <td><input type="email" id="email" name="email" required /></td>
+            </tr>
+            <tr>
+                <td><lable>Contact Number</lable></td>
+                <td><input type="text" id="contact" name="contact" required /></td>
+            </tr>
+            <tr>
     <tr>
         <td></td>
         <td><button>Update</button></td>
@@ -45,109 +35,45 @@
 
     <script>
         $(document).ready(function(){
-            $("#btnCreate").click(function(){
+            $("button").click(function(){
                 //alert("button clicked.....")
-                //send data to rest api for post request handler
-                //http:localhost:9000/api/customer/7
+                //send data to rest api for put request handler
+                //http:localhost:9000/api/register
                 var theCustomer={
                     "id":7,
                     "firstname": "Sudeep",
-                    "lastname" : "Konde",
-                    "email" : "konde@gmail.com",
-                    "contact number" : 98776543335
+                    "lastname" : "konde",
+                    "email" : "kondya@gmail.com",
+                    "contact number" : 9665992872
                 };
-            })
-
-            let url="/api/customers/"+theCustomer.id;
-            //invoiking PUT REST API At server side
+            let url="/api/customers/:id" + theCustomer.id;
+            //invoking put rest api at server side 
             /*$.put(url,theCustomer,function(){
                 console.log("data is updated to server.")
-            });   
-            */
-            //in jQuery there are no $,delete function availble
-            //we should use $.ajax function
-            //generic function to call any type of HTTP Request Handler
-            //available at server side
+            }); */
             
-           //Client Side CRUD Operations using jQuery
-           //CRUD Operation of jQuery to invoke CRUD Operations Available at server side
-           //$.ajax() method
-            //U operation : update operation
-            $("#btnUpdate").click(function(){
-                //alert("button clicked.....")
-                //send data to rest api for post request handler
-                //http:localhost:9000/api/customer/7
-                var theCustomer={
-                    "id":7,
-                    "firstname": "Sanskruti",
-                    "lastname" : "Rasal",
-                    "email" : "rasal@gmail.com",
-                    "contactnumber" : 98446543335
-                };
+            // in jquery there are no $.put and $.delete functon available
+            //we should use $.ajax function
+            //to call any type od HTTP Request handler
+            //available at server side 
+            // $.ajax is a generic function used for att GET POST PUT DELETEd
+
             $.ajax({
-                url: 'test.html', //url of rest api
+                url: url, // url of rest api
                 type:'PUT', //request type of rest api
-                data:theCustomer, //data to be sent through request body
-                success: function (result){
-                    //Do something with the result 
+                data: theCustomer, // data to be sent through request body
+                success: function (result) {
+                    // do something with result
                     console.log("customer is updated to server");
                 }
-            });
+            })
 
-            //C operation : Create operation
-            $.ajax({
-                url: 'test.html', //url of rest api
-                type:'POST', //request type of rest api
-                data:theCustomer, //data to be sent through request body
-                success: function (result){
-                    //Do something with the result 
-                    console.log("customer is posted to server");
-                }
-            });
+            })
+        })
 
-            //used to fetch all customer from server
-            // d : delete operation
-            $.ajax({
-                url: url, //url of rest api
-                type:'DELETE', //request type of rest api
-                success: function (result){
-                    //Do something with the result 
-                    console.log("the customer is deleted form the server");
-                }
-            });
-            
-            //used to fetch all customer from server
-            //R : read operation
-            $("#btnRead").click(function(){
-            $.ajax({
-                url: url, //url of rest api
-                type:'GET', //request type of rest api
-                success: function (result){
-                    //Do something with the result
-
-                    console.log(result);
-                }
-            });
-            });
-
-            $("#btnReadTasks").click(function(){
-            $.ajax({
-                url: "/api/tasks", //url of rest api
-                type:'GET', //request type of rest api
-                success: function (result){
-                    //Do something with the result
-                    console.log(result);
-                    console.log("All tasks recieved from server, ultimately from database server");
-                },
-                error:function(err){
-                    console.log(err);
-
-                }
-            });
-            });
-        });
-        });
-    
     </script>
-</body>
+
+
+        </body>
+    </head>
 </html>

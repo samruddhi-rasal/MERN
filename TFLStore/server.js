@@ -1,15 +1,16 @@
 var express = require('express');
 var path = require('path');
-var app = express();
+const app = express();
 var fs=require('fs');
 
-var sql=require('./mysql2connect');
+var mysql=require('mysql2');
 var dbserver ={
     host:'localhost',
     user:'root',
     password:'password',
     database: 'customers'
 };
+var connection=mysql.createConnection(dbserver);
 
 var credentials = require('./data/credentials.json');
 var flowers = require('./data/flowers.json');
@@ -69,15 +70,17 @@ app.get("/api/flowers/:id",(req,res)=>{
 //HTTP CRUD Operations for Flowers
 app.get("/api/users",(req,res)=>{
     var selectAllQuery="select * from users";
-    sql.query(selectAllQuery,function(err,data){
+    connection.query(selectAllQuery,function(err,data){
     if(err){
         console.log("error : " +err);
     }
     else{
+        console.log(data);
         res.send(data);
     }
-});
 
+});
+//res.send(data);
 });
 
 
