@@ -1,0 +1,85 @@
+/* Navbar background color */
+.navbar {
+  background-color: #f5f0e6; /* beige */
+}
+
+/* Brand text color */
+.navbar .navbar-brand {
+  color: #000 !important; /* black */
+}
+
+/* Optional: navbar links also black */
+.navbar .nav-link {
+  color: #000 !important;
+}
+
+/* Hover effect (optional but nice) */
+.navbar .nav-link:hover {
+  color: #714a22 !important; /* soft brown */
+}
+
+.card {
+    height : 100%
+}
+
+.card-img-top{
+    height : 300px;
+    object-fit : cover;
+}
+/* Carousel Styling */
+.carousel-img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 34, 34, 0.45);
+}
+
+.carousel-caption {
+  bottom: 45%;
+  text-align: center;
+}
+
+.carousel-caption h1 { 
+  font-size: 3rem;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f5f0e6; /* beige */
+}
+
+
+/* Glassmorphism effect for modal */
+.modal-content {
+  background: rgba(255, 255, 255, 0.55); /* transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 13px;
+  border: 1px solid rgba(255, 192, 203, 0.3); /* soft pink border */
+}
+
+/* Pink Send Message button */
+.modal .btn-primary {
+  background-color: #ff5c8a;
+  border-color: #ff5c8a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link.active {
+  color: var(--bs-warning) !important;
+  font-weight: 600;
+}
