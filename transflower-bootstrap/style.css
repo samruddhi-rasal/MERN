@@ -1,6 +1,6 @@
 /* Navbar background color */
 .navbar {
-  background-color: #f5f0e6; /* beige */
+  background-color: #b7a789; /* beige */
 }
 
 /* Brand text color */
@@ -56,7 +56,7 @@ body {
 }
 
 body {
-  background-color: #f5f0e6; /* beige */
+  background-color: #e0d5c0; /* beige */
 }
 
 
@@ -83,3 +83,101 @@ html {
   color: var(--bs-warning) !important;
   font-weight: 600;
 }
+
+/* Colorful Hero Section */
+.custom-nav {
+  background: linear-gradient(135deg, #ffe4ec, #fdf7f0, #e6f7f1);
+  padding: 4rem 0;
+}
+
+/* Heading */
+.custom-nav h1 {
+  color: #2c2c2c;
+}
+
+/* Subtext */
+.custom-nav p {
+  color: #555;
+}
+
+/* Pink Outline Button */
+.btn-outline-pink {
+  border: 2px solid #ff5fa2;
+  color: #ff5fa2;
+}
+
+.custom-nav {
+  background: linear-gradient(
+    90deg,
+    #ffe4ec 0%,
+    #fff6f0 50%,
+    #ffe4ec 100%
+  );
+  padding: 4rem 0;
+}
+
+/* Baby pink background for success modal */
+.bg-baby-pink {
+  background-color: #ffb6c1; /* baby pink */
+}
+
+/* Baby pink button */
+.btn-baby-pink {
+  background-color: #ffb6c1;
+  border-color: #ffb6c1;
+  color: #fff;
+}
+
+.btn-baby-pink:hover {
+  background-color: #ff9eb5;
+  border-color: #ff9eb5;
+  color: #fff;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+
+/* Primary buttons → Pink */
+.btn-primary {
+  background-color: #ff5fa2 !important;   /* baby/dark pink */
+  border-color: #ff5fa2 !important;
+  color: #fff !important;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+  background-color: #ff85b8 !important;   /* lighter pink */
+  border-color: #ff85b8 !important;
+  color: #fff !important;
+}
+
+/* Optional: Add to Cart (outline style if used) */
+.btn-outline-primary {
+  border-color: #ff5fa2 !important;
+  color: #ff5fa2 !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff5fa2 !important;
+  color: #fff !important;
+}
+
+/* Bloom animation for navbar icon */
+.navbar-brand i {
+  animation: bloom 6s ease-in-out infinite alternate;
+}
+
+@keyframes bloom {
+  0% {
+    transform: scale(1);
+    color: #fff;
+  }
+  100% {
+    transform: scale(1.2);
+    color: #ffeb3b;
+  }
+}
+
+
