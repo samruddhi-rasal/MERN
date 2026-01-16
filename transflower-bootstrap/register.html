@@ -19,21 +19,19 @@
       border-radius: 16px;
     }
 
-    .card-header {
-      background-color: #e74c6a;
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-    }
+   .card-header {
+  background-color: #ff7eb3;   /* baby pink */
+}
 
-    .btn-register {
-      background-color: #e74c6a;
-      color: white;
-    }
+.btn-register {
+  background-color: #ff7eb3;
+  color: white;
+}
 
-    .btn-register:hover {
-      background-color: #d8435f;
-      color: white;
-    }
+.btn-register:hover {
+  background-color: #ff9cc7;   /* lighter baby pink */
+}
+
   </style>
 </head>
 
@@ -44,10 +42,14 @@
 
     <div class="card shadow-lg">
       <div class="card-header text-white text-center">
-        <h4 class="mb-0">🌸 Create Your Account</h4>
+        <h4 class="mb-0">Create Your Account</h4>
       </div>
 
       <div class="card-body p-4">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> You have registered successfully.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  </div>
         <form id="registrationForm" novalidate>
 
           <!-- First Name -->

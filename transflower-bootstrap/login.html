@@ -20,28 +20,28 @@
     }
 
     .card-header {
-      background-color: #e74c6a; /* floral pink/red */
+      background-color: #ff7eb3; /* floral pink/red */
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
     }
 
     .btn-login {
-      background-color: #e74c6a;
+      background-color:#ff7eb3;
       color: white;
     }
 
     .btn-login:hover {
-      background-color: #d8435f;
+      background-color: #ff7eb3;
       color: white;
     }
 
     .btn-register {
-      border: 2px solid #e74c6a;
-      color: #e74c6a;
+      border: 2px solid #ff7eb3;
+      color: #ff7eb3;
     }
 
     .btn-register:hover {
-      background-color: #e74c6a;
+      background-color: #ff7eb3;
       color: white;
     }
   </style>
@@ -75,9 +75,12 @@
           </div>
 
           <!-- Login Button -->
-          <button type="submit" class="btn btn-login w-100 mb-3">
-            Login
-          </button>
+          <button type="button" class="btn btn-login w-100 mb-3"
+        onclick="showSuccessMessage()">
+  Login
+</button>
+
+
 
           <!-- Register Button -->
           <a href="register.html" class="btn btn-register w-100">
@@ -90,6 +93,18 @@
 
   </div>
 </div>
+<script>
+function showSuccessMessage() {
+  const alertDiv = document.createElement('div');
+  alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+  alertDiv.role = 'alert';
+  alertDiv.innerHTML = `
+    <strong>Success!</strong> You are logged in.
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+  `;
+  document.body.prepend(alertDiv);
+}
+</script>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
