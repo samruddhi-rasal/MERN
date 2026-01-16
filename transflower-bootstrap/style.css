@@ -102,8 +102,8 @@ html {
 
 /* Pink Outline Button                                    */
 .btn-outline-pink {
-  border: 2px solid  #a08043;
-  color:  #a08043;
+  border: 2px solid  #8b6c32;
+  color:  #9b8150;
 }
 
 .custom-nav {
@@ -412,5 +412,42 @@ h1 {
 
 .card img {
   height: 200px;
+  object-fit: cover;
+}
+
+
+/* Hero title */
+.hero-title {
+  font-weight: 700;          /* bold */
+  color: #000;               /* black */
+  font-size: 2.8rem;         /* keeps it strong and clean */
+  line-height: 1.15;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  color: #000;               /* black */
+  font-size: 1.15rem;        /* same readable size */
+  margin-top: 10px;
+}
+
+/* Shop Now button (outlined elegant style) */
+.hero-btn {
+  border: 2px solid #8b6b3d; /* elegant brown-gold */
+  color: #8b6b3d;
+  background: transparent;
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #8b6b3d;
+  color: #fff;
+}
+.hero-image {
+  max-height: 420px;
   object-fit: cover;
 }

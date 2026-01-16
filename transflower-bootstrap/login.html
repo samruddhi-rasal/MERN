@@ -4,37 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transflower Store - Login</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Small internal styling for beige theme -->
+  <style>
+    body {
+      background-color: #f5f0e6; /* beige background */
+    }
+
+    .card {
+      background-color: #fffaf2; /* light beige card */
+      border-radius: 16px;
+    }
+
+    .card-header {
+      background-color: #e74c6a; /* floral pink/red */
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    .btn-login {
+      background-color: #e74c6a;
+      color: white;
+    }
+
+    .btn-login:hover {
+      background-color: #d8435f;
+      color: white;
+    }
+
+    .btn-register {
+      border: 2px solid #e74c6a;
+      color: #e74c6a;
+    }
+
+    .btn-register:hover {
+      background-color: #e74c6a;
+      color: white;
+    }
+  </style>
 </head>
-<body class="bg-light">
+
+<body>
 
 <div class="container vh-100 d-flex justify-content-center align-items-center">
   <div class="col-md-4">
+
     <div class="card shadow-lg">
-      <div class="card-header bg-danger text-white text-center">
-        <h4>Welcome Back 🌼</h4>
+      <div class="card-header text-white text-center">
+        <h4 class="mb-0">Welcome</h4>
       </div>
-      <div class="card-body">
+
+      <div class="card-body p-4">
         <form id="loginForm" novalidate>
+
+          <!-- Email -->
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" required>
             <div class="invalid-feedback">Please enter a valid email.</div>
           </div>
 
+          <!-- Password -->
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" required>
             <div class="invalid-feedback">Please enter your password.</div>
           </div>
 
-          <button type="submit" class="btn btn-danger w-100">Login</button>
+          <!-- Login Button -->
+          <button type="submit" class="btn btn-login w-100 mb-3">
+            Login
+          </button>
+
+          <!-- Register Button -->
+          <a href="register.html" class="btn btn-register w-100">
+            Create New Account
+          </a>
+
         </form>
       </div>
     </div>
+
   </div>
 </div>
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Validation Script -->
 <script>
 (() => {
   'use strict';
@@ -51,6 +111,5 @@
 })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
