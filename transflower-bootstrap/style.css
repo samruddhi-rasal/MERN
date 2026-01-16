@@ -100,10 +100,10 @@ html {
   color: #555;
 }
 
-/* Pink Outline Button */
+/* Pink Outline Button                                    */
 .btn-outline-pink {
-  border: 2px solid #ff5fa2;
-  color: #ff5fa2;
+  border: 2px solid  #a08043;
+  color:  #a08043;
 }
 
 .custom-nav {
@@ -139,30 +139,42 @@ html {
 }
 
 
-/* Primary buttons → Pink */
-.btn-primary {
-  background-color: #ff5fa2 !important;   /* baby/dark pink */
-  border-color: #ff5fa2 !important;
-  color: #fff !important;
+/* ===== Pink Buttons (Custom) ===== */
+
+/* Buy Now – Solid Pink */
+.btn-pink {
+  background-color: #ff6fae;
+  border: 1px solid #ff6fae;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect */
-.btn-primary:hover {
-  background-color: #ff85b8 !important;   /* lighter pink */
-  border-color: #ff85b8 !important;
-  color: #fff !important;
+.btn-pink:hover {
+  background-color: #ff8fc4;
+  border-color: #ff8fc4;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
-/* Optional: Add to Cart (outline style if used) */
-.btn-outline-primary {
-  border-color: #ff5fa2 !important;
-  color: #ff5fa2 !important;
+/* Add to Cart – Pink Outline */
+.btn-pink-outline {
+  background-color: transparent;
+  border: 2px solid #ff6fae;
+  color: #ff6fae;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-.btn-outline-primary:hover {
-  background-color: #ff5fa2 !important;
-  color: #fff !important;
+.btn-pink-outline:hover {
+  background-color: #ff6fae;
+  color: #ffffff;
 }
+
 
 /* Bloom animation for navbar icon */
 .navbar-brand i {
@@ -180,4 +192,225 @@ html {
   }
 }
 
+/* FAQ Simple – No Card Look */
+.faq-simple {
+  color: #222;
+}
 
+.faq-question {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.faq-answer {
+  margin-left: 28px; /* subtle indent */
+  color: #333;
+  line-height: 1.6;
+  max-width: 850px;
+}
+
+/* Optional subtle divider */
+.faq-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  margin-top: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   ACCORDION (FAQ) STYLING
+   ========================= */
+
+/* Focus ring in baby pink */
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 182, 193, 0.6);
+}
+
+/* Accordion question style */
+.accordion-button {
+  background-color: transparent;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Open accordion header */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(255, 192, 203, 0.35); /* baby pink */
+  color: #111;
+}
+
+/* Remove default arrow color dominance */
+.accordion-button::after {
+  filter: brightness(0.4);
+}
+
+/* Accordion body */
+.accordion-body {
+  background-color: transparent;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TABS (Explore Collections)
+   ========================= */
+
+/* Tabs container */
+.nav-tabs {
+  border-bottom: none;
+}
+
+/* Default tab */
+.nav-tabs .nav-link {
+  color: #444;
+  border: none;
+  font-weight: 500;
+  margin: 0 6px;
+}
+
+/* Active tab – Transflower pink */
+.nav-tabs .nav-link.active {
+  background-color: #e91e63; /* brand pink */
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 20px;
+}
+
+/* Hover effect */
+.nav-tabs .nav-link:hover {
+  color: #e91e63;
+}
+
+
+/* =========================
+   TAB CONTENT ANIMATION
+   ========================= */
+
+.tab-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bloom Bar */
+.bloom-bar {
+  background: #fff0f6;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+/* Hover gradient bloom */
+.bloom-bar:hover {
+  background: linear-gradient(90deg, #a08043, #bda271);
+}
+
+/* Left side layout */
+.bloom-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Brand */
+.brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* Navigation links */
+.bloom-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  margin-right: 14px;
+  position: relative;
+}
+
+/* Elegant underline hover */
+.bloom-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #a07c39;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.bloom-nav a:hover::after {
+  width: 100%;
+}
+
+/* Hidden tagline */
+.tagline {
+  font-size: 0.9rem;
+  opacity: 0;
+  margin-left: 10px;
+  color: #222;
+  transition: opacity 0.6s ease;
+}
+
+/* Reveal tagline on hover */
+.bloom-bar:hover .tagline {
+  opacity: 1;
+}
+
+/* Login pill */
+.login-pill {
+  background: #a07c39;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.register-pill {
+  background: #a07c39;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.login-pill:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px #a07c39(255, 95, 162, 0.4);
+}
+
+
+h1 {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.lead {
+  color: #555;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}

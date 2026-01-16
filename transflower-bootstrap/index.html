@@ -6,7 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transflower Store</title>
 
-  <section class="text-center py-3 custom-nav">
+  <body>
+  <header class="bloom-bar">
+  <!-- Left: Brand -->
+  <div class="bloom-left">
+    <span class="brand">🌻 Transflower</span>
+  </div><!-- Right: Nav + Login together -->
+  <div class="bloom-right">
+    <nav class="bloom-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+  
+    </nav>
+  </div>
+</header>
+<section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <h1>Fresh Flowers Delivered Daily🌹</h1>
+        <p class="lead">Order online and make every day bloom beautifully.</p>
+        <button class="btn btn-black-outline">Shop Now</button>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="images/Fresh_Store.jpg"
+             class="img-fluid rounded-4 shadow"
+             alt="Hero Image">
+      </div>
+    </div>
+  </section>
+<section class="text-center py-3 custom-nav">
   <div class="container py-3 custom-nav">
     <h1 class="fw-bold">Welcome to Transflower Store</h1>
     <p class="lead">Nature-inspired beauty delivered fresh every day.</p>
@@ -23,34 +54,7 @@
 <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-  
   <!-- Content will go here -->
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#home"><i>🌻</i> Transflower Store</a>
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        
-      </ul>
-    </div>
-
-  </div>
-</nav>
-
 
 <!-- Carousel -->
 <div id="storeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="hover">
@@ -62,7 +66,7 @@
       <img src="images/fresh_flowers.jpg" class="d-block w-100 carousel-img" alt="Fresh Flowers">
       <div class="carousel-overlay"></div>
       <div class="carousel-caption">
-        <h1 class="fw-bold">Fresh Flowers Everyday</h1>
+        <h1 class="fw-bold text-white">Fresh Flowers Everyday</h1>
         <p class="lead">Explore nature’s beauty with us</p>
         <a href="#products" class="btn btn-outline-light">Shop Now</a>
       </div>
@@ -73,7 +77,7 @@
       <img src="images/Seasonal_flowers.jpg" class="d-block w-100 carousel-img" alt="Seasonal Flowers">
       <div class="carousel-overlay"></div>
       <div class="carousel-caption">
-        <h1 class="fw-bold">Seasonal Specials</h1>
+        <h1 class="fw-bold text-white">Seasonal Specials</h1>
         <p class="lead">Handpicked for every occasion</p>
         <a href="#products" class="btn btn-outline-light">View Collection</a>
       </div>
@@ -84,7 +88,7 @@
       <img src="images/gift flowers.jpg" class="d-block w-100 carousel-img" alt="Gift Flowers">
       <div class="carousel-overlay"></div>
       <div class="carousel-caption">
-        <h1 class="fw-bold">Gift Happiness</h1>
+        <h1 class="fw-bold text-white">Gift Happiness</h1>
         <p class="lead">Send love wrapped in petals</p>
         <a href="#products" class="btn btn-outline-light">Send Gifts</a>
       </div>
@@ -115,7 +119,12 @@
           <div class="card-body text-center">
             <h5 class="card-title">Red Roses</h5>
             <p class="card-text">Elegant bouquet for special moments.</p>
-            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+            <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="btn btn-pink">Buy Now</a>
+            <a href="#" class="btn btn-pink-outline">
+              <i class="bi bi-cart-plus"></i> Add to Cart
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -126,7 +135,12 @@
           <div class="card-body text-center">
             <h5 class="card-title">Tulip Delight</h5>
             <p class="card-text">Fresh tulips to brighten your day.</p>
-            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+            <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="btn btn-pink">Buy Now</a>
+            <a href="#" class="btn btn-pink-outline">
+              <i class="bi bi-cart-plus"></i> Add to Cart
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -137,7 +151,12 @@
           <div class="card-body text-center">
             <h5 class="card-title">Exotic Hibiscus</h5>
             <p class="card-text">Vibrant hibiscus blooms to add a tropical touch.</p>
-            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+            <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="btn btn-pink">Buy Now</a>
+            <a href="#" class="btn btn-pink-outline">
+              <i class="bi bi-cart-plus"></i> Add to Cart
+            </a>
+          </div>
           </div>
         </div>
       </div>
@@ -148,7 +167,12 @@
           <div class="card-body text-center">
             <h5 class="card-title">Sunflower Joy</h5>
             <p class="card-text">Fills your home with sunshine and cheerful vibes.</p>
-            <a href="#" class="btn btn-outline-primary">Buy Now</a>
+            <div class="d-flex justify-content-center gap-2">
+            <a href="#" class="btn btn-pink">Buy Now</a>
+            <a href="#" class="btn btn-pink-outline">
+              <i class="bi bi-cart-plus"></i> Add to Cart
+            </a>
+          </div>
           </div>
         </div>
       </div>
