@@ -11,17 +11,31 @@
   <!-- Beige Theme Styling -->
   <style>
     body {
-      background-color: #f5f0e6; /* beige background */
-    }
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(245, 240, 230, 0.6),
+      rgba(245, 240, 230, 0.6)
+    ),
+    url("images/register-bg.jpg") no-repeat center center / cover;
+}
+
 
     .card {
-      background-color: #fffaf2; /* light beige card */
-      border-radius: 16px;
-    }
-
-   .card-header {
-  background-color: #ff7eb3;   /* baby pink */
+  background: rgba(255, 250, 242, 0.85); /* transparent beige */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+ 
+   .card-header {
+  background: rgba(255, 126, 179, 0.9);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
 
 .btn-register {
   background-color: #ff7eb3;

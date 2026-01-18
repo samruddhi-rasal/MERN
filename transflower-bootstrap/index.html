@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -146,14 +148,14 @@
       </ul>
 
       <!-- Tab Content -->
-      <div class="tab-content p-2 border rounded">
-        <div class="tab-pane fade show active" id="flowers">
+      <div class="tab-content p-2 border rounded mb-1">
+        <div class="tab-pane fade show active text-center py-2" id="flowers">
           <p>Explore our vibrant collection of fresh flowers.</p>
         </div>
-        <div class="tab-pane fade" id="gifts">
+        <div class="tab-pane fade text-center py-2" id="gifts">
           <p>Unique gifts for birthdays, weddings, and more.</p>
         </div>
-        <div class="tab-pane fade" id="plants">
+        <div class="tab-pane fade text-center py-2" id="plants">
           <p>Indoor and outdoor plants to bring freshness home.</p>
         </div>
       </div>
@@ -163,16 +165,16 @@
 </div>
 
 <!-- Product Section -->
-<section class="py-5">
+<section class="py-3">
   <div class="container">
-    <h2 class="text-center mt-2 mb-3">Our Featured Flowers</h2>
+    <h2 class="text-center mt-0 mb-2">Our Featured Flowers</h2>
     <div class="row">
       <div class="col-md-3 mb-3" data-aos="fade-up">
         <div class="card flex-fill">
-          <img src="images\RedRoses.jpg" class="card-img-top mb-3" alt="Flower">
+          <img src="images\RedRoses.jpg" class="card-img-top mb-3" alt="Flower" style="height: 260px; object-fit: cover";>
           <div class="card-body text-center py-4">
             <h5 class="card-title">Red Roses</h5>
-            <p class="card-text mb-4">Elegant bouquet for special moments.</p>
+            <p class="mb-4">Elegant bouquet for special moments.</p>
             <div class="d-flex justify-content-center gap-2">
             <a href="#" class="btn btn-pink">Buy Now</a>
             <a href="#" class="btn btn-pink-outline">
@@ -185,7 +187,7 @@
 
       <div class="col-md-3 mb-3" data-aos="fade-up">
         <div class="card flex-fill">
-          <img src="images\Tulip.jpg" class="card-img-top mb-3" alt="Flower">
+          <img src="images\Tulip.jpg" class="card-img-top mb-3" alt="Flower" style="height: 260px; object-fit: cover">
           <div class="card-body text-center py-4">
             <h5 class="card-title">Tulip Delight</h5>
             <p class="card-text mb-3">Fresh tulips to brighten your day.</p>
@@ -201,7 +203,7 @@
 
       <div class="col-md-3 mb-3"data-aos="fade-up">
         <div class="card flex-fill">
-          <img src="images\hibiscus.jpg" class="card-img-top mb-3" alt="Flower">
+          <img src="images\hibiscus.jpg" class="card-img-top mb-3" alt="Flower" style="height: 260px; object-fit: cover">
           <div class="card-body text-center py-4">
             <h5 class="card-title">Exotic Hibiscus</h5>
             <p class="card-text mb-3">Vibrant hibiscus blooms to add a tropical touch.</p>
@@ -217,7 +219,7 @@
 
       <div class="col-md-3 mb-3" data-aos="fade-up">
         <div class="card flex-fill">
-          <img src="images\Sunflower.jpg" class="card-img-top mb-3" alt="Flower">
+          <img src="images\Sunflower.jpg" class="card-img-top mb-3" alt="Flower" style="height: 260px; object-fit: cover">
           <div class="card-body text-center py-4">
             <h5 class="card-title">Sunflower Joy</h5>
             <p class="card-text mb-3">Fills your home with sunshine and cheerful vibes.</p>
@@ -235,9 +237,30 @@
   
 </section>
 <!-- Footer -->
-<footer class="text-center text-black py-3">
-  <p class="mb-0">&copy; 2025 Transflower Store. All Rights Reserved.</p>
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">About Transflower</h5>
+        <p>We provide quality tech and lifestyle products with a touch of elegance and innovation.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5 class="fw-bold">Connect with Us</h5>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+        <p class="mt-3 mb-0">Email: support@transflower.in</p>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <small>© 2025 Transflower Store. All Rights Reserved.</small>
+    </div>
+  </div>
 </footer>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
