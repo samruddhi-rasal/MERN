@@ -607,4 +607,35 @@ h1 {
   transform: scale(1.2);
 }
 
+/* 🌸 Pink Pagination Theme */
+
+.pink-pagination .page-link {
+  background-color: #fff0f6;
+  color: #ff7eb3;
+  border: 2px solid #ff7eb3;
+  border-radius: 10px;
+  margin: 0 6px;
+  font-weight: 600;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.pink-pagination .page-link:hover {
+  background-color: #ff7eb3;
+  color: #ffffff;
+}
+
+/* Active Page */
+.pink-pagination .page-item.active .page-link,
+.pink-pagination .page-link:focus {
+  background-color: #ff7eb3;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.2rem rgba(255, 126, 179, 0.35);
+}
+
+/* Remove default button outline */
+.pink-pagination button {
+  outline: none;
+}
 
