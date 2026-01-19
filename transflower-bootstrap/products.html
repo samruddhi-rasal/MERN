@@ -21,37 +21,44 @@
 </head>
 <body>
   
-  <!-- Content will go here -->
-<!-- Navbar -->
-<header class="bloom-bar">
-  <!-- Left: Brand -->
-  <div class="bloom-left">
-    <span class="brand">🌻 Transflower</span>
-  </div>
+ <nav class="navbar navbar-expand-lg bloom-bar px-4">
+  <div class="container-fluid">
 
-  <!-- Right: Nav + Login together -->
-  <div class="bloom-right">
-    <nav class="bloom-nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    <!-- Brand -->
+    <a class="navbar-brand brand" href="index.html">🌻 Transflower</a>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav bloom-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
       </ul>
     </div>
-
   </div>
 </nav>
+
 <form class="d-flex ms-lg-3 align-items-center bloom-search">
   <input 
     class="form-control bloom-search-input me-2"
@@ -73,9 +80,9 @@
     </button>
 
     <ul class="dropdown-menu bloom-dropdown-menu">
-      <li><a class="dropdown-item" href="#">🌸 Flowers</a></li>
-      <li><a class="dropdown-item" href="#">💐 Bouquets</a></li>
-      <li><a class="dropdown-item" href="#">🌼 Garlands</a></li>
+      <li><a class="dropdown-item" href="#Flowers">🌸 Flowers</a></li>
+      <li><a class="dropdown-item" href="#Bouquet">💐 Bouquets</a></li>
+      <li><a class="dropdown-item" href="#Garlands">🌼 Garlands</a></li>
     </ul>
   </div>
 </div>
@@ -117,7 +124,7 @@
   </div>
 </section>
 
-<section class="container my-8">
+<section id="Flowers" class="container my-8">
   <h2 class="text-center mb-2">Our Featured Products</h2>
 
   <div class="row g-4">
@@ -187,7 +194,7 @@
   </div>
 </section>
 
-<section class="container my-5">
+<section id="Bouquet" class="container my-5">
   <h2 class="text-center mb-4">Our Best Selling Bouquets</h2>
 
   <!-- ROW START -->
@@ -325,7 +332,7 @@
 </div>
 </section>
 
-<section class="container my-5">
+<section id="Garlands" class="container my-5">
   <h2 class="text-center mb-4">Garlands</h2>
 
   <!-- ROW START -->

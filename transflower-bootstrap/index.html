@@ -16,22 +16,52 @@
   <title>Transflower Store</title>
 </head>
 <body>
-  <header class="bloom-bar">
-    <!-- Left: Brand -->
-    <div class="bloom-left">
-      <span class="brand">🌻Transflower</span>
+  <nav class="navbar navbar-expand-lg bloom-bar">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand brand" href="index.html">
+      🌻 Transflower
+    </a>
+
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#transflowerNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav links -->
+    <div class="collapse navbar-collapse justify-content-end"
+         id="transflowerNavbar">
+      <ul class="navbar-nav mb-2 mb-lg-0 bloom-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+
+      </ul>
     </div>
-    <!-- Right: Nav + Login together -->
-    <div class="bloom-right">
-      <nav class="bloom-nav">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-      </nav>
-    </div>
-  </header>
+
+  </div>
+</nav>
+
 
   <section class="container my-5">
     <div class="row align-items-center">
