@@ -1,7 +1,7 @@
 [
-    {"id":1,"name":"Rose", "description":"wedding flowers", "price":10, "imageurl":"/images/rose.jpg", "quantity":5, "likes": 45000}, 
-    {"id":2,"name":"Lily", "description":"birthday flowers", "price":15, "imageurl":"/images/lily.jpg", "quantity":3, "likes": 30000},
-    {"id":3,"name":"Tulip", "description":"anniversary flowers", "price":12, "imageurl":"/images/tulip.jpg", "quantity":7, "likes": 25000},
-    {"id":4,"name":"Daisy", "description":"get well soon flowers", "price":8, "imageurl":"/images/daisy.jpg", "quantity":10, "likes": 15000},
-    {"id":5,"name":"Orchid", "description":"special occasion flowers", "price":20, "imageurl":"/images/orchid.jpg", "quantity":4, "likes": 40000}
+    {"id":1,"name":"Rose", "description":"wedding flowers", "Unit Price":10, "imageurl":"/images/rose.jpg", "quantity":5, "likes": 45000}, 
+    {"id":2,"name":"Lily", "description":"birthday flowers", "Unit Price":15, "imageurl":"/images/lily.jpg", "quantity":3, "likes": 30000},
+    {"id":3,"name":"Tulip", "description":"anniversary flowers", "Unit Price":12, "imageurl":"/images/tulip.jpg", "quantity":7, "likes": 25000},
+    {"id":4,"name":"Daisy", "description":"get well soon flowers", "Unit Price":8, "imageurl":"/images/daisy.jpg", "quantity":10, "likes": 15000},
+    {"id":5,"name":"Orchid", "description":"special occasion flowers", "Unit Price":20, "imageurl":"/images/orchid.jpg", "quantity":4, "likes": 40000}
 ]

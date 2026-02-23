@@ -16,19 +16,19 @@
         //Ajax Function for only Read from Customers in the client side
         $(document).ready(function(){
             $('#btnRead').click(function(){
-                let url="/api/customers";
-                $.ajax({
-                url: url, // url of rest api
-                type:'GET', //request type of rest api
-                success: function (result) {
-                    // do something with result
-                    console.log("All Users");
+                let url= url;
+                  $.ajax({
+                    url: url,
+                    type: "GET",
+                    success: function(result){
                     console.log(result);
+                    console.log("the customer is deleted from server");
                 },
                 error:function(err){
                     console.log(err);
+                
                 }
-            });
+            })
             });
         });
 

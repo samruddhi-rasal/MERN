@@ -26,9 +26,10 @@ app.use(express.json());
 //Server side HTTP CRUD Operations Implementation
 //CRUD Operations are perform on customer JSON Array 
 //Node JS Application consists of 4 REST API Handlers
-app.get("/", function(req, res) {
-    res.sendfile("index.html");
+app.get("/jquerydemo1", function(req, res) {
+    res.sendFile(path.join(__dirname, "public", "jquerydemo1.html"));
 });
+
 
 //When Client Application invokes web api and recieved json data as response
 //it is called as REST API
