@@ -5,7 +5,7 @@ class Order extends React.Component {
     return (
       <div>
         <h3>Order Details</h3>
-        <h4>Customer: {this.props.customer}</h4>
+        <h4><u>Customer: {this.props.customer}</u></h4>
         <hr />
 
         <p>Id: {this.props.id}</p>

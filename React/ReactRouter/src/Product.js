@@ -1,16 +1,50 @@
-function Product(props) { //PROPS IS PROPERTIES
-  return (  //props is an object containing data passed from parent (your List component)
-    <div>
-      <h1>Product Details</h1>
-      <p>Title: {props.title}</p>
-      <img src={props.imageurl} alt={props.title} width="150" />
-      <p>Description: {props.description}</p>
-      <p>Price: Rs{props.unitprice}</p>
-      <p>Quantity: {props.quantity}</p>
-      <p>Likes: {props.likes}</p>
-      <button>Add to Cart</button>
-    </div>
-  );
+import Counter from "./Counter";
+import React from 'react';
+
+class Product extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = { likes: props.likes };
+
+    this.handler = this.handler.bind(this);
+  }
+
+  handler(data) {
+    this.setState({ likes: data });
+  }
+
+  render() {
+    return (
+      <div>
+        <h1><u>Product Details</u></h1>
+
+        <p>Title: {this.props.title}</p>
+
+        <img 
+          src={this.props.imageurl} 
+          alt={this.props.title} 
+          width="150" 
+        />
+
+        <p>Description: {this.props.description}</p>
+        <p>Price: Rs{this.props.unitprice}</p>
+        <p>Quantity: {this.props.quantity}</p>
+
+        {/* ✅ USE STATE HERE */}
+        <p>Likes: {this.state.likes}</p>
+
+        {/* ✅ PASS STATE + HANDLER */}
+        <Counter 
+          count={this.state.likes} 
+          handler={this.handler}
+        />
+
+        <button>Add to Cart</button>
+      </div>
+    );
+  }
 }
 
 export default Product;
