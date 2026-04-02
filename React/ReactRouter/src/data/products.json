@@ -1,0 +1,101 @@
+[
+  {
+    "id": 12,
+    "title": "Gerbera",
+    "description": "Wedding flower",
+    "imageurl": "/images/gerbera.jpg",
+    "unitprice": 12,
+    "quantity": 5000,
+    "likes": 9000
+  },
+  {
+    "id": 13,
+    "title": "Carnation",
+    "description": "Delicate flower",
+    "imageurl": "/images/carnation.jpg",
+    "unitprice": 8,
+    "quantity": 25000,
+    "likes": 87000
+  },
+  {
+    "id": 14,
+    "title": "Lotus",
+    "description": "Worship flower",
+    "imageurl": "/images/lotus.jpg",
+    "unitprice": 25,
+    "quantity": 15000,
+    "likes": 455000
+  },
+  {
+    "id": 15,
+    "title": "Rose",
+    "description": "Valentine flower",
+    "imageurl": "/images/rose.jpg",
+    "unitprice": 10,
+    "quantity": 35000,
+    "likes": 96000
+  },
+  {
+    "id": 16,
+    "title": "Jasmine",
+    "description": "Smelling flower",
+    "imageurl": "/images/jasmine.jpg",
+    "unitprice": 3,
+    "quantity": 85000,
+    "likes": 56000
+  },
+  {
+    "id": 17,
+    "title": "Lily",
+    "description": "Beautiful flower",
+    "imageurl": "/images/lily.jpg",
+    "unitprice": 10,
+    "quantity": 35000,
+    "likes": 7660
+  },
+  {
+    "id": 18,
+    "title": "Marigold",
+    "description": "Festival flower",
+    "imageurl": "/images/marigold.jpg",
+    "unitprice": 3,
+    "quantity": 85000,
+    "likes": 76000
+  },
+  {
+    "id": 19,
+    "title": "Tulip",
+    "description": "Silk flower",
+    "imageurl": "/images/tulip.jpg",
+    "unitprice": 10,
+    "quantity": 35000,
+    "likes": 76000
+  },
+  {
+    "id": 20,
+    "title": "Daisy",
+    "description": "Swiss flower",
+    "imageurl": "/images/daisy.jpg",
+    "unitprice": 76,
+    "quantity": 8000,
+    "likes": 760
+  },
+  {
+    "id": 21,
+    "title": "Orchid",
+    "description": "Delicate flower",
+    "imageurl": "/images/orchid.jpg",
+    "unitprice": 56,
+    "quantity": 35000,
+    "likes": 76000
+  },
+  {
+    "id": 22,
+    "title": "Dahlia",
+    "description": "Pink flower",
+    "imageurl": "/images/dahlia.jpg",
+    "unitprice": 45,
+    "quantity": 85000,
+    "likes": 76000
+  }
+]

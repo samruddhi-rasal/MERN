@@ -1,0 +1,9 @@
+[
+    {"id":1,"firstname":"Sai","lastname":"Jagdale","email":"sai.jagdale@gmail.com","contact":"9876543210"},
+    {"id":2,"firstname":"Raj","lastname":"Patil","email":"raj@gmail.com","contact":"8765432109"},
+    {"id":3,"firstname":"Anita","lastname":"Shah","email":"shah.anita@gmail.com","contact":"7654321098"},
+    {"id":4,"firstname":"Vikram","lastname":"Deshmukh","email":"deshmukh@gmail.com","contact":"6543210987"},
+    {"id":5,"firstname":"Neha","lastname":"Kumar","email":"neha.kumar@gmail.com","contact":"5432109876"},
+    {"id":6,"firstname":"Amit","lastname":"Singh","email":"singh.a@gmail.com","contact":"4321098765"},
+    {"id":7,"firstname":"Pooja","lastname":"Verma","email":"pooja@gmail.com","contact":"3210987654"} 
+]

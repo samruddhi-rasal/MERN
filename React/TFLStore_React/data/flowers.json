@@ -1,0 +1,7 @@
+[
+    {"id":1,"name":"Rose","color":"Red","price":10,"imageurl":"/images/rose.jpg","likes":4500},
+    {"id":2,"name":"Jasmine","color":"White","price":12,"imageurl":"/images/jasmine.jpg","likes":3000},
+    {"id":3,"name":"Tulip","color":"Pink","price":15,"imageurl":"/images/tulip.jpg","likes":2500},
+    {"id":4,"name":"Lily","color":"White-Pink","price":8,"imageurl":"/images/lily.jpg","likes":4000},
+    {"id":5,"name":"Orchid","color":"Purple","price":20,"imageurl":"/images/orchid.jpg","likes":1500}
+]
