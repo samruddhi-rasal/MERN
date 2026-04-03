@@ -1,15 +1,23 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-
 import Login from './Login';
 import List from './list';
 import Register from './Register';
 import Orders from './Orders';
+import Hello from './Hello';
+import Goodbye from './Goodbye';
 
+// Class Component
 function App() {
   return (
     <div className="App">
-      <BasicRouting />
+      <Router>
+        <Routes>
+          <Route path="/Hello" component={Hello} />
+          <Route path="/" component={Goodbye} />
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
