@@ -1,13 +1,16 @@
-import React from 'react';
+import {useNavigate} from 'react-router-dom';
+import react from 'react';
+import Hello from './Hello';
 
-class Goodbye extends React.Component {
-    render() {
-        return (
-            <div>
-                <h2>Goodbye, see you next time!</h2>
-                <button> Hello</button>
-            </div>
-        );
-    }
+function Goodbye(){
+    const navigate = useNavigate();
+    
+    return( 
+        <div>
+            <h2>Goodbye from Transflower</h2>
+            <button onClick={() => navigate("/")}>Hello</button>
+        </div>
+    );
 }
+
 export default Goodbye;
